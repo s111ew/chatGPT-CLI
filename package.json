@@ -1,16 +1,12 @@
 {
   "name": "chatgpt-cli",
   "version": "1.0.0",
-  "description": "ChatGPT CLI integration for MacOS terminal",
+  "description": "A ChatGPT CLI integration for MacOS terminal",
   "main": "main.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": ["ChatGPT", "terminal", "CLI", "MacOS", "GPT"],
+  "author": "s111ew",
+  "license": "MIT",
   "dependencies": {
-    "axios": "^1.7.7",
-    "dotenv": "^16.4.5"
+    "axios": "^1.7.7"
   }
 }
