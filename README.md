@@ -24,7 +24,7 @@ Reload your terminal config.
 source ~/.zshrc
 ```
 
-OPTIONALLY: Create an alias for the CLI so it starts up on 'chat'.
+Create an alias for the CLI so it starts up on 'chat'.
 
 ```
 echo 'alias chat="node /path/to/main.js"' >> ~/.zshrc
@@ -34,4 +34,10 @@ Reload your terminal config.
 
 ```
 source ~/.zshrc
+```
+
+OPTIONALLY: Change the default model on line 17 of main.js. The default model is 'ChatGPT3.5 turbo'.
+
+```
+model: 'gpt-3.5-turbo',
 ```
