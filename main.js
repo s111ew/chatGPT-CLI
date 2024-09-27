@@ -33,3 +33,49 @@ const messages = [
   { role: 'system', content: 'You are a helpful assistant.' }
 ];
 
+function askQuestion() {
+  console.log('\nPrompt:');
+
+  let userInput = '';
+
+  rl.on('line', (input) => {
+    if (input.split(' ').pop() === '--') {
+      input = input.replace('--', '');
+      userInput += input + '\n'
+      rl.removeAllListeners('line');
+      processUserInput(userInput);
+    } else {
+      userInput += input + '\n';
+    }
+  }).on('close', () => {
+    console.log('Ending...');
+    process.exit(0);
+  });
+}
+
+async function processUserInput(userInput) {
+  userInput = userInput.trim();
+  if (!userInput) {
+    askQuestion();
+    return;
+  }
+
+  messages.push({ role: 'user', content: userInput });
+
+  const botResponse = await getChatGPTResponse(messages);
+
+  console.log('\nChatGPT:\n', botResponse);
+
+  messages.push({ role: 'assistant', content: botResponse });
+
+  askQuestion();
+}
+
+function startChat() {
+  console.log('ChatGPT CLI');
+  console.log('Finish input with "--"');
+  console.log('End chat with ctrl+D');
+  askQuestion();
+}
+
+startChat();
