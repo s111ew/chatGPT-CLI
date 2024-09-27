@@ -4,6 +4,14 @@ Simple ChatGPT integration for the MacOS terminal. Useful for simple queries wit
 
 Accepts multi-line input. Always end prompt with " --".
 
+Setup:
+
+Install package.
+
+```
+npm i -g chatgpt-cli-zsh
+```
+
 Add your OpenAI API key as a global environment variable in the terminal.
 
 ```

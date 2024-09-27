@@ -1,11 +1,14 @@
 {
-  "name": "chatgpt-cli",
+  "name": "chatgpt-cli-zsh",
   "version": "1.0.0",
   "description": "A ChatGPT CLI integration for MacOS terminal",
   "main": "main.js",
   "keywords": ["ChatGPT", "terminal", "CLI", "MacOS", "GPT"],
   "author": "s111ew",
   "license": "MIT",
+  "bin": {
+      "chat": "./main.js"
+  },
   "dependencies": {
     "axios": "^1.7.7"
   }
