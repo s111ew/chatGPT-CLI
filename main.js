@@ -73,7 +73,7 @@ async function processUserInput(userInput) {
 
 function startChat() {
   console.log('ChatGPT CLI');
-  console.log('Finish input with "--"');
+  console.log('Finish input with " --"');
   console.log('End chat with ctrl+D');
   askQuestion();
 }
